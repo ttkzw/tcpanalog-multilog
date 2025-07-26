@@ -1,0 +1,15 @@
+## tcpanalog for multilog
+
+tcpanalog is a collection of tools to help you analyze tcpserver's records.
+This package includes:
+  INSTALL: how to install?
+  README: this file
+  tcpmatchup: it matches up tcpserver's log
+  column: it adjusts output to column
+  tcphosts: it prints what hosts ware allowed to connect and how often did
+  tcpdomains: it prints what domains connected and how often did
+  tcpdeny: it prints what hosts ware refused to connect and how often did
+  ztcphosts: it adjusts tcpok's output
+  ztcpdomains: it adjusts tcpdomain's output
+  ztcpdeny: it adjusts tcpdeny's output
+

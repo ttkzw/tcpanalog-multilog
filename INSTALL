@@ -1,0 +1,30 @@
+Like any other piece of software (and information generally),
+tcpanalog comes with NO WARRANTY.
+
+
+Things you have to decide before starting:
+
+ * The tcpanalog bin directory, normally /usr/local/bin/tcpanalog.
+    (To change this directory, edit Makefile now.)
+
+How to install:
+
+ 1. Create the tcpanalog scripts:
+      $ make
+ 2. Create the bin directory:
+      # make install
+
+
+How to run:
+
+ 3. Make sure that tcpserver's log contains microsecond timestamps; e.g.,
+      891369186.031284 tcpserver: pid 14363 ...
+      891369186.121287 tcpserver: ok 14363 ...
+      891369187.107080 tcpserver: end 14363 ...
+    The multilog of daemontools can provide TAI64N timestamps.
+    You must convert TAI64N timestamps to TAI timestamps.
+ 4. Feed tcpserver's log through tcpanalog/tcpmatchup:
+      $ /usr/local/bin/tcpanalog/tcpmatchup < /service/smtpd/log/main/* > out
+    You must have awk in your path.
+ 5. Feed the tcpmatchup output through any of the tcpanalog/z* scripts.
+    Each script explains its output.
